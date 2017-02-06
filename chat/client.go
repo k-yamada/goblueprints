@@ -11,7 +11,7 @@ type client struct {
 }
 
 func (c *client) read() {
-	for (
+	for {
 		if _, msg, err := c.socket.ReadMessage(); err == nil {
 			c.room.forward <- msg
 		} else {
